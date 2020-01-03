@@ -252,7 +252,7 @@ test('refreshJourney', async (t) => {
 	t.end()
 })
 
-test('journeysFromTrip – U Mehringdamm to U Naturkundemuseum, reroute to Spittelmarkt.', async (t) => {
+test.skip('journeysFromTrip – U Mehringdamm to U Naturkundemuseum, reroute to Spittelmarkt.', async (t) => {
 	const blnMehringdamm = '730939'
 	const blnStadtmitte = '732541'
 	const blnNaturkundemuseum = '732539'
@@ -271,7 +271,7 @@ test('journeysFromTrip – U Mehringdamm to U Naturkundemuseum, reroute to Spitt
 	const when = new Date()
 	const validate = createValidate({...cfg, when})
 
-	const findTripBetween = async (stopA, stopB, direction, products = {}) => {
+	const findTripBetween = async (stopA, stopB, products = {}) => {
 		const {journeys} = await client.journeys(stopA, stopB, {
 			departure: new Date(when - 10 * minute),
 			transfers: 0, products,
@@ -298,9 +298,9 @@ test('journeysFromTrip – U Mehringdamm to U Naturkundemuseum, reroute to Spitt
 		return {trip: null, prevStopover: null}
 	}
 
-	// Find a vehicle from U Mehringdamm to U Naturkundemuseum (to the north) that is
-	// currently between U Mehringdamm and U Stadtmitte.
-	const {trip, prevStopover} = await findTripBetween(blnMehringdamm, blnStadtmitte, blnNaturkundemuseum, {
+	// Find a vehicle from U Mehringdamm to U Stadtmitte (to the north) that is currently
+	// between these two stations.
+	const {trip, prevStopover} = await findTripBetween(blnMehringdamm, blnStadtmitte, {
 		regionalExp: false, regional: false, suburban: false
 	})
 	t.ok(trip, 'precondition failed: trip not found')
