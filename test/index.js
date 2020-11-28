@@ -20,6 +20,7 @@ require('./vsn-remarks')
 require('./db-netz-remarks')
 require('./vsn-departures')
 require('./mobiliteit-lu-line')
+require('./vrn-subscription-journey')
 
 require('./throttle')
 require('./retry')
