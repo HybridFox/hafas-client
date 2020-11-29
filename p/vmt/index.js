@@ -31,6 +31,7 @@ const hvvProfile = {
 	// fails with `CGI_READ_FAILED`
 	// radar: true,
 	remarks: false, // seems like ver >= 1.20 is required
+	subscriptions: false,
 }
 
 module.exports = hvvProfile

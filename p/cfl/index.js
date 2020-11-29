@@ -29,6 +29,7 @@ const cflProfile = {
 	radar: true,
 	// todo: reachableFrom?
 	remarks: false, // seems like ver >= 1.20 is required
+	subscriptions: false,
 }
 
 module.exports = cflProfile;

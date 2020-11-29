@@ -25,6 +25,7 @@ const hvvProfile = {
 	refreshJourney: true,
 	reachableFrom: true,
 	remarks: false, // seems like ver >= 1.20 is required
+	subscriptions: false, // fails with "CGI_NO_SERVER" 🤷‍♂️
 }
 
 module.exports = hvvProfile

@@ -27,6 +27,7 @@ const mobiliteitLuProfile = {
 	trip: true,
 	radar: true,
 	reachableFrom: true,
+	subscriptions: false,
 
 	// Version 1.25 doesn't seem to support getPasslist & stbFltrEquiv
 	// for departures()/arrivals().

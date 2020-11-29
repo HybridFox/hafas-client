@@ -124,6 +124,7 @@ const vbbProfile = {
 	radar: true,
 	reachableFrom: true,
 	remarks: false, // seems like ver >= 1.20 is required
+	subscriptions: false,
 }
 
 module.exports = vbbProfile

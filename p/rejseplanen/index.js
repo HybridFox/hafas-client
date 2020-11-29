@@ -23,6 +23,7 @@ const rejseplanenProfile = {
 	departuresStbFltrEquiv: false,
 	trip: true,
 	radar: true,
+	subscriptions: false, // fails with "HCI Service: request failed" 🤷‍♂️
 }
 
 module.exports = rejseplanenProfile;

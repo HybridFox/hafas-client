@@ -34,6 +34,7 @@ const invgProfile = {
 	radar: true,
 	refreshJourney: true,
 	remarks: false, // seems like ver >= 1.20 is required
+	subscriptions: false,
 }
 
 module.exports = invgProfile

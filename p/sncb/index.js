@@ -70,6 +70,7 @@ const sncbProfile = {
 	radar: true,
 	// todo: `reachableFrom: true` fails with `H9240`
 	remarks: false, // seems like ver >= 1.20 is required
+	subscriptions: false,
 }
 
 module.exports = sncbProfile
