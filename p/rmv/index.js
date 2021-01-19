@@ -5,7 +5,7 @@ const products = require('./products')
 const transformReqBody = (ctx, body) => {
 	body.client = {type: 'WEB', id: 'RMV', name: 'webapp'}
 	body.ext = 'RMV.1'
-	body.ver = '1.18'
+	body.ver = '1.39'
 	body.auth = {type: 'AID', aid: 'x0k4ZR33ICN9CWmj'}
 
 	return body
@@ -24,7 +24,6 @@ const hvvProfile = {
 	radar: true,
 	refreshJourney: true,
 	reachableFrom: true,
-	remarks: false, // seems like ver >= 1.20 is required
 }
 
 module.exports = hvvProfile

@@ -10,9 +10,13 @@ const formatRemarksReq = (ctx) => {
 	}
 
 	const req = {
-		getPolyline: !!opt.polylines,
 		himFltrL,
 	}
+
+	if (profile.remarksGetPolyline) {
+		req.getPolyline = !!opt.polylines
+	}
+
 	// todo: stLoc, dirLoc
 	// todo: comp, dept, onlyHimId, onlyToday
 	// todo: dailyB, dailyE

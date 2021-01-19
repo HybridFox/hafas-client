@@ -5,7 +5,7 @@ const products = require('./products')
 const transformReqBody = (ctx, body) => {
 	body.ext = 'DK.9'
 	body.client = {type: 'AND', id: 'DK'}
-	body.ver = '1.21'
+	body.ver = '1.43'
 	body.auth = {type: 'AID', aid: 'irkmpm9mdznstenr-android'}
 
 	return body

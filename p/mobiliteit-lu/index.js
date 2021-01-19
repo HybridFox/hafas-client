@@ -9,7 +9,7 @@ const transformReqBody = (ctx, body) => {
 		name: 'webapp',
 		l: 'vs_webapp',
 	}
-	body.ver = '1.25'
+	body.ver = '1.43'
 	body.auth = {type: 'AID', aid: 'SkC81GuwuzL4e0'}
 	body.lang = 'de'
 
@@ -28,8 +28,6 @@ const mobiliteitLuProfile = {
 	radar: true,
 	reachableFrom: true,
 
-	// Version 1.25 doesn't seem to support getPasslist & stbFltrEquiv
-	// for departures()/arrivals().
 	departuresGetPasslist: false,
 	departuresStbFltrEquiv: false,
 }

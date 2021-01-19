@@ -5,7 +5,7 @@ const products = require('./products')
 const transformReqBody = (ctx, body) => {
 	body.client = {type: 'AND', id: 'HVV', name: 'HVVPROD_ADHOC', v: '4020100'}
 	body.ext = 'HVV.1'
-	body.ver = '1.16'
+	body.ver = '1.18'
 	body.auth = {type: 'AID', aid: 'andcXUmC9Mq6hjrwDIGd2l3oiaMrTUzyH'}
 
 	return body
@@ -28,7 +28,7 @@ const hvvProfile = {
 	radar: true,
 	refreshJourney: true,
 	reachableFrom: true,
-	remarks: false, // seems like ver >= 1.20 is required
+	remarksGetPolyline: false,
 	lines: false, // fails with `FAIL` "HCI Service: request failed"
 }
 

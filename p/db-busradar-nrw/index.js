@@ -82,7 +82,7 @@ const transformReqBody = (_, body) => {
 		v: 100021
 	}
 	body.ext = 'DB.REGIO.1'
-	body.ver = '1.10'
+	body.ver = '1.24'
 	body.auth = {type: 'AID', aid: 'OGBAqytjHhCvr0J4'}
 	return body
 }
@@ -98,8 +98,8 @@ const dbBusradarNrwProfile = {
 	journeysOutFrwd: false,
 	trip: true,
 	radar: true,
-	remarks: false, // seems like ver >= 1.20 is required
-	lines: false, // seems like ver >= 1.16 is required
+	remarks: true, // `.svcResL[0].res.msgL[]` is missing though 🤔
+	lines: false, // `.svcResL[0].res.lineL[]` is missing 🤔
 }
 
 module.exports = dbBusradarNrwProfile

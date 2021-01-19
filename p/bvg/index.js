@@ -17,7 +17,7 @@ const products = require('./products')
 const transformReqBody = (ctx, body) => {
 	body.client = {type: 'IPA', id: 'BVG', name: 'FahrInfo', v: '6020000'}
 	body.ext = 'BVG.1'
-	body.ver = '1.21'
+	body.ver = '1.44'
 	body.auth = {type: 'AID', aid: 'Mz0YdF9Fgx0Mb9'}
 
 	return body

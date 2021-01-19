@@ -9,7 +9,7 @@ const transformReqBody = (ctx, body) => {
 		v: '2',
 		name: 'CapMetro'
 	}
-	body.ver = '1.13'
+	body.ver = '1.40'
 	body.auth = {type: 'AID', aid: 'ioslaskdcndrjcmlsd'}
 
 	return body
@@ -27,8 +27,7 @@ const cmtaProfile = {
 	radar: true,
 	refreshJourney: true,
 	reachableFrom: true,
-	remarks: false, // seems like ver >= 1.20 is required
-	lines: false, // seems like ver >= 1.16 is required
+	remarks: true, // `.svcResL[0].res.msgL[]` is missing though 🤔
 }
 
 module.exports = cmtaProfile

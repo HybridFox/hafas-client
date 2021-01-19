@@ -38,7 +38,6 @@ client.journeys(mersch, bruxellesCentral, {results: 1})
 // 	address: 'Mersch, Rue Mies 1',
 // 	latitude: 49.746044, longitude: 6.102228,
 // }, {
-// 	when: new Date('2020-10-10T10:00:00+02:00'),
 // 	maxDuration: 30
 // })
 

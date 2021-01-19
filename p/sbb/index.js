@@ -9,7 +9,7 @@ const transformReqBody = (ctx, body) => {
 		id: 'DBZUGRADARNETZ',
 		v: '',
 	}
-	body.ver = '1.18'
+	body.ver = '1.40'
 	body.auth = { aid: 'hf7mcf9bv3nv8g5f', type:'AID' }
 	body.lang = 'deu'
 

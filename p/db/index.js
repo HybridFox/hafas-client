@@ -27,7 +27,7 @@ const transformReqBody = (ctx, body) => {
 
 	body.client = {id: 'DB', v: '16040000', type: 'IPH', name: 'DB Navigator'}
 	body.ext = 'DB.R19.04.a'
-	body.ver = '1.15'
+	body.ver = '1.34'
 	body.auth = {type: 'AID', aid: 'n91dB8Z77MLdoR0K'}
 
 	return body
@@ -469,11 +469,10 @@ const dbProfile = {
 
 	formatStation,
 
-	trip: true, // todo: #49
+	trip: true,
 	radar: true,
 	reachableFrom: true,
-	remarks: false, // seems like ver >= 1.20 is required
-	lines: false, // seems like ver >= 1.16 is required
+	lines: false, // `.svcResL[0].res.lineL[]` is missing 🤔
 }
 
 module.exports = dbProfile

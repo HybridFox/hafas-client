@@ -10,7 +10,7 @@ const transformReqBody = (ctx, body) => {
 		name: 'IrishRailPROD-APPSTORE',
 		os: 'iOS 12.4.8',
 	}
-	body.ver = '1.18'
+	body.ver = '1.33'
 
 	body.auth = {type: 'AID', aid: 'P9bplgVCGnozdgQE'}
 	body.lang = 'ga'

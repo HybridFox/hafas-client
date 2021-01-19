@@ -13,7 +13,7 @@ const transformReqBody = (ctx, body) => {
 		name: 'Saarfahrplan',
 		os: 'Android 9'
 	}
-	body.ver = '1.21'
+	body.ver = '1.30'
 	body.auth = {type: 'AID', aid: '51XfsVqgbdA6oXzHrx75jhlocRg6Xe'}
 	body.lang = 'de'
 

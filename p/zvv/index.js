@@ -5,7 +5,7 @@ const products = require('./products')
 const transformReqBody = (ctx, body) => {
 	body.client = {type: 'IPH', id: 'ZVV', name: 'zvvPROD-STORE', v: '6000400'}
 	body.ext = 'ZVV.2'
-	body.ver = '1.24'
+	body.ver = '1.42'
 	body.auth = {type: 'AID', aid: 'TLRUqdDPF7ttB824Yoy2BN8mk'}
 
 	return body
@@ -29,8 +29,7 @@ const zvvProfile = {
 
 	trip: true,
 	radar: true,
-	// todo: fails with "Parser error: root.svcReqL.svcReqL.req(ctxRecon)"
-	refreshJourney: false,
+	refreshJourneyUseOutReconL: true,
 	reachableFrom: true,
 }
 

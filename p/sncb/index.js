@@ -17,7 +17,7 @@ const transformReq = (ctx, req) => ({...req, agent})
 
 const transformReqBody = ({opt}, body) => {
 	body.client = {type: 'IPH', id: 'SNCB', name: 'sncb', v: '4030200'}
-	body.ver = '1.16'
+	body.ver = '1.21'
 	body.auth = {type: 'AID', aid: 'sncb-mobi'}
 	body.lang = opt.language || 'fr'
 
@@ -68,8 +68,7 @@ const sncbProfile = {
 	trip: true,
 	refreshJourney: true,
 	radar: true,
-	// todo: `reachableFrom: true` fails with `H9240`
-	remarks: false, // seems like ver >= 1.20 is required
+	reachableFrom: false, // todo: fails with `H9240`
 }
 
 module.exports = sncbProfile

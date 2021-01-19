@@ -10,7 +10,7 @@ const transformReqBody = (ctx, body) => {
 		os: 'iOS 12.1.4',
 		name: 'NVVMobilPROD_APPSTORE'
 	}
-	body.ver = '1.18'
+	body.ver = '1.32'
 	body.ext = 'NVV.6.0'
 	body.auth = {type: 'AID', aid: 'Kt8eNOH7qjVeSxNA'}
 	body.lang = 'de'
@@ -29,11 +29,11 @@ const saarfahrplanProfile = {
 
 	products: products,
 
-	departuresGetPasslist: true,
+	departuresGetPasslist: false,
+	departuresStbFltrEquiv: false,
 	trip: true,
 	radar: true,
 	reachableFrom: true,
-	remarks: false, // seems like ver >= 1.20 is required
 }
 
 module.exports = saarfahrplanProfile

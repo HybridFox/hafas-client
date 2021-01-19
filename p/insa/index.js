@@ -10,7 +10,7 @@ const transformReqBody = (ctx, body) => {
 		name: 'nasaPROD',
 		os: 'iPhone OS 11.2.5'
 	}
-	body.ver = '1.18'
+	body.ver = '1.34'
 	body.auth = {type: 'AID', aid: "nasa-apps"}
 	body.lang = 'en' // todo: `de`?
 
@@ -27,9 +27,8 @@ const insaProfile = {
 
 	trip: true,
 	radar: true,
-	refreshJourney: false,
+	refreshJourneyUseOutReconL: true,
 	reachableFrom: true,
-	remarks: false, // seems like ver >= 1.20 is required
 }
 
 module.exports = insaProfile;

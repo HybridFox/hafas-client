@@ -18,9 +18,8 @@ const transformReqBody = (ctx, body) => {
 		name: 'oebbIPAD_ADHOC',
 		os: 'iOS 10.3.3'
 	}
-	// todo: https://gist.github.com/anonymous/a5fc856bc80ae7364721943243f934f4#file-haf_config_base-properties-L33 shows 1.16
-	body.ver = '1.16'
-	body.auth = {aid: 'OWDL4fE4ixNiPBBm'}
+	body.ver = '1.41'
+	body.auth = {type: 'AID', aid: 'OWDL4fE4ixNiPBBm'}
 	body.lang = 'de'
 
 	return body
@@ -71,10 +70,12 @@ const oebbProfile = {
 	parseLocation: parseHook(_parseLocation, fixWeirdPOIs),
 	parseMovement: parseHook(_parseMovement, fixMovement),
 
+	departuresGetPasslist: false,
+	departuresStbFltrEquiv: false,
 	trip: true,
 	radar: true,
 	reachableFrom: true,
-	remarks: false, // seems like ver >= 1.20 is required
+	lines: false, // `.svcResL[0].res.lineL[]` is missing 🤔
 }
 
 module.exports = oebbProfile

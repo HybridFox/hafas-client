@@ -11,12 +11,13 @@ const products = require('./products')
 
 const transformReqBody = (ctx, body) => {
 	body.client = {
+		type: 'IPH',
 		id: 'NAHSH',
 		name: 'NAHSHPROD',
 		v: '3000700'
 	}
-	body.ver = '1.16'
-	body.auth = {aid: 'r0Ot9FLFNAFxijLW'}
+	body.ver = '1.30'
+	body.auth = {type: 'AID', aid: 'r0Ot9FLFNAFxijLW'}
 	body.lang = 'de'
 
 	return body
@@ -91,9 +92,8 @@ const nahshProfile = {
 	parseMovement: parseHook(_parseMovement, fixMovement),
 
 	trip: true,
-	radar: true, // todo: see #34
+	radar: true,
 	reachableFrom: true,
-	remarks: false, // seems like ver >= 1.20 is required
 }
 
 module.exports = nahshProfile

@@ -4,7 +4,7 @@ const products = require('./products')
 
 const transformReqBody = (ctx, body) => {
 	body.client = {type: 'IPH', id: 'VBN', name: 'vbn', v: '6000000'}
-	body.ver = '1.27'
+	body.ver = '1.42'
 	body.auth = {type: 'AID', aid: 'kaoxIXLn03zCr2KR'}
 
 	return body
@@ -27,9 +27,7 @@ const insaProfile = {
 	trip: true,
 	radar: true,
 	reachableFrom: true,
-
-	// todo: these fail with ver >= 1.21, see #164
-	refreshJourney: false,
+	refreshJourneyUseOutReconL: true,
 	departuresGetPasslist: false,
 	departuresStbFltrEquiv: false,
 }

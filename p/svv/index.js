@@ -5,7 +5,7 @@ const products = require('./products')
 const transformReqBody = (ctx, body) => {
 	body.client = {type: 'WEB', id: 'VAO', name: 'webapp'}
 	body.ext = 'VAO.11'
-	body.ver = '1.20'
+	body.ver = '1.39'
 	body.auth = {type: 'AID', aid: 'wf7mcf9bv3nv8g5f'}
 	return body
 }

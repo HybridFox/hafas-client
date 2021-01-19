@@ -5,7 +5,7 @@ const products = require('./products')
 const transformReqBody = (ctx, body) => {
 	body.client = {type: 'WEB', id: 'RSAG', name: 'webapp'}
 	body.ext = 'VBN.2'
-	body.ver = '1.24'
+	body.ver = '1.42'
 	body.auth = {type: 'AID', aid: 'tF5JTs25rzUhGrrl'}
 
 	return body
@@ -23,9 +23,7 @@ const rsagProfile = {
 	trip: true,
 	radar: true,
 	reachableFrom: true,
-
-	// todo: these fail ver >=1.21, see #164
-	refreshJourney: false,
+	refreshJourneyUseOutReconL: true,
 	departuresGetPasslist: false,
 	departuresStbFltrEquiv: false,
 }

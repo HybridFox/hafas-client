@@ -4,7 +4,7 @@ const products = require('./products')
 
 const transformReqBody = (ctx, body) => {
 	body.client = {type: 'IPH', id: 'HAFAS', name: 'VMT', v: '2040100'}
-	body.ver = '1.18'
+	body.ver = '1.34'
 	body.auth = {type: 'AID', aid: 't2h7u1e6r4i8n3g7e0n'}
 
 	return body
@@ -28,7 +28,7 @@ const hvvProfile = {
 	trip: true,
 	refreshJourney: true,
 	reachableFrom: true,
-	// fails with `CGI_READ_FAILED`
+	// fails with `HCI Service: service method disabled`
 	// radar: true,
 	remarks: false, // seems like ver >= 1.20 is required
 }

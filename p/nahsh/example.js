@@ -17,7 +17,6 @@ client.journeys('8000103', '8000199', {results: 10, tickets: true})
 // 	latitude: 54.295691,
 // 	longitude: 10.116424
 // }, {distance: 60})
-// client.radar(54.4, 10.0, 54.2, 10.2, {results: 10})
 // client.reachableFrom({
 // 	type: 'location',
 // 	address: 'Husum, Berliner Straße 80',
@@ -26,6 +25,15 @@ client.journeys('8000103', '8000199', {results: 10, tickets: true})
 // }, {
 // 	when: new Date('2018-08-27T10:00:00+0200'),
 // 	maxDuration: 20
+// })
+
+// client.radar({
+// 	north: 54.4,
+// 	west: 10.0,
+// 	south: 54.2,
+// 	east: 10.2
+// }, {
+// 	results: 10,
 // })
 
 .then((data) => {

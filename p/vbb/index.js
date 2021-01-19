@@ -18,7 +18,7 @@ const products = require('./products')
 const transformReqBody = (ctx, body) => {
 	body.client = {type: 'IPA', id: 'VBB', name: 'vbbPROD', v: '4010300'}
 	body.ext = 'VBB.1'
-	body.ver = '1.16'
+	body.ver = '1.39'
 	body.auth = {type: 'AID', aid: 'hafas-vbb-apps'}
 
 	return body
@@ -123,7 +123,6 @@ const vbbProfile = {
 	trip: true,
 	radar: true,
 	reachableFrom: true,
-	remarks: false, // seems like ver >= 1.20 is required
 }
 
 module.exports = vbbProfile

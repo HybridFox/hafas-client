@@ -9,7 +9,7 @@ const transformReqBody = (ctx, body) => {
 		name: 'invgPROD-APPSTORE-LIVE',
 		v: '1040000'
 	}
-	body.ver = '1.16'
+	body.ver = '1.32'
 	body.auth = {type: 'AID', aid: 'GITvwi3BGOmTQ2a5'}
 
 	return body
@@ -33,7 +33,6 @@ const invgProfile = {
 	trip: true,
 	radar: true,
 	refreshJourney: true,
-	remarks: false, // seems like ver >= 1.20 is required
 }
 
 module.exports = invgProfile
